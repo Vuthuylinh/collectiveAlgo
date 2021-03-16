@@ -19,6 +19,7 @@ Example:  arr = [-8,0,2,5]
   Approach:
    iterate the input arr, compare arr[i]?i -> return i / -1
 */
+// Solution1: O(n) |O(1)
 
 function indexEqualsValueSearch(arr){
   for(let i=0; i<arr.length; i++){
@@ -29,5 +30,23 @@ function indexEqualsValueSearch(arr){
   return -1
 }
 
+//solution2 O(log(n))| O(1)
+//arr = [-8,0,2,5]
+//              ^
+function indexEqualsValueSearch1(arr){
+  let start =0
+  let end = arr.length-1
+  while(start<=end){
+    let i = Math.floor((start+end)/2)
+    if(arr[i]<i){
+      start =i+1
+    }else if((arr[i] - i == 0) && ((i == 0) ||(arr[i-1] - (i-1) < 0))){
+      return i
+    }else{
+      end == i-1
+    }
+  }
 
+  return -1
+}
 
