@@ -46,7 +46,6 @@ function indexEqualsValueSearch1(arr){
       end == i-1
     }
   }
-
   return -1
 }
 
