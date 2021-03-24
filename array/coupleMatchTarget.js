@@ -16,12 +16,14 @@ Approach:
         check if set has key == arr2[j]
          yes -> return true
          no => return false
+
+
 */
 let set ={}
 function checkCoupleMatchTarget(arr1,arr2,target){
   for(let i =0; i<arr1.length; i++){
       let remainder = target -arr1[i]
-      set[remainder]= arr1[i]
+      set[remainder]= arr1[i] // we can set[remainder]=true
   }
 
   for (let j=0; j<arr2.length; j++){
