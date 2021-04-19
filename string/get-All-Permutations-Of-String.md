@@ -4,7 +4,12 @@
   Implement a function that gets all permutations or orderings of a given string. For example if the input is ‘abc’, the output should be [‘abc’, ‘acb’, ‘cab’, ‘cba’, ‘bca’, ‘bac’].
 
 ## Approach:
+- reference:
+  - reference 1: https://initjs.org/all-permutations-of-a-set-f1be174c79f8
+  - reference 2: https://medium.com/swlh/step-by-step-guide-to-solving-string-permutation-using-recursion-in-javascript-a11d098d5b83
+
 - Use recursion because we don't know how large is the string will be.
+  
 ```js
 permutations(abc) = a + permutations(bc) +
                     b + permutations(ac) +
