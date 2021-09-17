@@ -28,4 +28,14 @@ For example:
   `A B G J D K H`
   output: `NULL`
 
+#  Approach :
+- initialize a empty set=[] => hold distinct char from the str1
+- iterate sstr1 => fill the set
+- initilize an array to keep the common char between 2 string
+- iterate the str2
+    + check if the set.has the char in str2 ?
+        yes => common array add the common char
+
+  return the common array
+
 
