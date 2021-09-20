@@ -46,7 +46,7 @@ https://leetcode.com/problems/longest-common-prefix/
 
 # Solution
 
-### Solution1:
+### Solution1: 79 milisecons
 
 ```js
  funtion findPrefix(strs){
@@ -64,4 +64,17 @@ https://leetcode.com/problems/longest-common-prefix/
  }
 return result;
  }
+```
+### Solution 2: 117 milisecons
+```js
+var longestCommonPrefix = function(strs) {
+    'use strict';
+    if (strs === undefined || strs.length === 0) { return ''; }
+
+    return strs.reduce((prev, next) => {
+        let i = 0;
+        while (prev[i] && next[i] && prev[i] === next[i]) i++;
+        return prev.slice(0, i);
+    });
+};
 ```
